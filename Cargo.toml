@@ -1,0 +1,9 @@
+[package]
+name = "ascii_adventure"
+version = "0.1.0"
+authors = ["Johnathan Lee <jfl747076@gmail.com>"]
+
+[dependencies]
+text_io = "*"
+common_rpg = { path = "deps/common_rpg"}
+uuid = { version = "0.6", features = ["v5"] }

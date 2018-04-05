@@ -1,0 +1,9 @@
+[package]
+name = "common_rpg"
+crate-type = ["dylib"]
+version = "0.1.0"
+authors = ["Johnathan Lee <jfl747076@gmail.com>"]
+
+
+[dependencies]
+uuid = "0.6"
