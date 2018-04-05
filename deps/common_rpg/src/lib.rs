@@ -1,3 +1,5 @@
+#![allow(unused_imports)]
+
 extern crate uuid;
 
 pub mod traits;
@@ -5,8 +7,5 @@ pub mod types;
 
 #[cfg(test)]
 mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+    // Todo: Test suite for common_rpg
 }

@@ -1,4 +1,5 @@
 #![allow(non_snake_case)]
+#![allow(unused_imports)]
 #![allow(dead_code)]
 
 #[macro_use]
@@ -15,14 +16,13 @@ use common_rpg::types::*;
 extern crate uuid;
 use uuid::Uuid;
 
-struct RPGTypeRegistry<'a> {
-    types: HashMap<Uuid, &'a RPGType>,
-    byModule: HashMap<&'a str, &'a RPGType>
+struct RPGTypeRegistry {
+    types: HashMap<Uuid, Box<RPGType>>,
 }
 
-impl<'a> RPGTypeRegistry<'a> {
-    fn register(&mut self, module: &str, rpgType: &RPGType) {
-        self.types.insert(Uuid::new_v5(&uuid::NAMESPACE_OID, rpgType.get_uuid_name()), &rpgType.clone());
+impl RPGTypeRegistry {
+    fn register(&mut self, rpgType: &RPGType) {
+        self.types.insert(Uuid::new_v5(&uuid::NAMESPACE_OID, rpgType.get_uuid_name()), rpgType.make_clone());
     }
 }
 

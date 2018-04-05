@@ -9,11 +9,15 @@ pub enum MetadataVariant<'a> {
     Bool(bool), Str(&'a str), Int(i32)
 }
 
+// All structs that get used in the game MUST implement this in order to function
 pub trait RPGType {
     fn get_metadata(&self) -> &HashMap<&str, MetadataVariant>;
     fn set_metadata(&mut self, &str, MetadataVariant);
 
+    fn get_module(&self) -> &str;
     fn get_uuid_name(&self) -> &str;
+
+    fn make_clone(&self) -> Box<RPGType>;
 
 }
 
