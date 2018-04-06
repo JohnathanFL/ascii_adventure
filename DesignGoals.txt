@@ -1,0 +1,11 @@
+1. common_rpg should be just that - only things which are common to all rpgs that will be made.
+
+2. Addons should be as easy as possible to use AND develop.
+    - Will be accomplished through dynamically loading libraries.
+3. Although common_rpg provides some specific stats (qi, soul, etc), there should be an interface to
+   use custom stats in any addon.
+    - Accomplished through Attributes (preferred) or RpgType MetaData (discouraged).
+4. Each module should be completely free to implement/structure different elements of the journey
+   as they see fit, while still being able to interop seamlessly with other modules.
+    - Will still provide common setups/implementations in common_rpg, since not all addons will need custom versions.
+    - Accomplished by using traits. ONLY the trait interface should be used outside the module.

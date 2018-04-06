@@ -37,6 +37,7 @@ impl BattleStats {
 }
 
 
+
 #[derive(Debug, Copy, Clone)]
 pub struct PersonalStats {
     pub strength: StatType,    // How hard can you hit?

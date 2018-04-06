@@ -22,7 +22,7 @@ struct RPGTypeRegistry {
 
 impl RPGTypeRegistry {
     fn register(&mut self, rpgType: &RPGType) {
-        self.types.insert(Uuid::new_v5(&uuid::NAMESPACE_OID, rpgType.get_uuid_name()), rpgType.make_clone());
+        self.types.insert(Uuid::new_v5(&uuid::NAMESPACE_OID, &rpgType.get_uuid_name()[0..]), rpgType.make_clone());
     }
 }
 
