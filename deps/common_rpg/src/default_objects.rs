@@ -12,11 +12,3 @@ extern crate uuid;
 
 use traits::*;
 use types::*;
-
-struct DefaultCharacter {
-    name: String,
-    personStats: PersonalStats,
-    battleStats: BattleStats,
-    affiliations: HashMap<String, u8>,
-    metadata: HashMap<String, MetadataVariant>,
-}

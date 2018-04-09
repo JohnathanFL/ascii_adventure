@@ -6,4 +6,5 @@ authors = ["Johnathan Lee <jfl747076@gmail.com>"]
 
 
 [dependencies]
-uuid = "0.6"
+uuid = { version = "0.6", features = ["v5"] }
+chrono = "0.4"

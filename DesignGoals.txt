@@ -8,4 +8,4 @@
 4. Each module should be completely free to implement/structure different elements of the journey
    as they see fit, while still being able to interop seamlessly with other modules.
     - Will still provide common setups/implementations in common_rpg, since not all addons will need custom versions.
-    - Accomplished by using traits. ONLY the trait interface should be used outside the module.
+    - Accomplished by using &Fn() stored in metadata.
